@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1/0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Map The Debris</title>
+    <style>
+        td {
+            background-color: gainsboro;
+            border: solid;
+        }
+
+        ;
+    </style>
 </head>
 
 <body>
@@ -23,11 +31,13 @@
                 <input name="flyingObject[1][object_altitude]">
             </p>
         </div>
-        <div id="add-new-object" onclick="addNewObject()"><H4>Add new object</H4></div>
+        <div id="add-new-object" onclick="addNewObject()">
+            <H4>Add new object</H4>
+        </div>
         <input type="button" id="sendData" value="Submit" onclick="calculateData()">
     </form>
     <p>Result:</p>
-    <p id="result"></p>
+    <table id="result"></table><!--din inventory update-->
     <script src="mapthedebris.js"></script>
 </body>
 
