@@ -16,7 +16,7 @@ function addNewObject() {
       <p>
       <label>Objects's altitude</label>
       <br>
-      <input name="flyingObject[${i}][object_altitude]>
+      <input name="flyingObject[${i}][object_altitude]">
       </p>  
       `;
     let container = document.getElementById("objects-container");
@@ -26,4 +26,22 @@ function addNewObject() {
     i++;
 };
 
+
 orbitalPeriod([{ name: "sputnik", avgAlt: 35873.5553 }]);
+
+function calculateData() {
+
+    let originalDataArray = [];
+
+    console.log(originalDataArray);
+    console.log("i", i);
+    for (let j = 0; j < (i - 1); j++) {
+        let testObject = {};
+        console.log(j);
+        console.log(`flyingObject[${j+1}][object_name]`);
+        testObject.name = document.getElementsByName(`flyingObject[${j + 1}][object_name]`)[0].value;
+        testObject.altitude =  document.getElementsByName(`flyingObject[${j + 1}][object_altitude]`)[0].value;
+        originalDataArray[j] = testObject;
+    };
+    console.log(originalDataArray);
+};
