@@ -1,4 +1,5 @@
 Return a new array that transforms the element's average altitude into their orbital periods.
+https://www.freecodecamp.org/challenges/map-the-debris
 
 The array will contain objects in the format {name: 'name', avgAlt: avgAlt}.
 
